@@ -1,12 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calcolo Prezzo Biglietto</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <script src="script.js"></script>
+  <div class="container">
+    <h1>Calcola il Prezzo del tuo Biglietto</h1>
+    <form id="ticket-form">
+      <label for="name">Nome Cognome</label>
+      <input type="text" id="name" placeholder="Inserisci il tuo nome" required>
+
+      <label for="distance">Km da percorrere</label>
+      <input type="number" id="distance" placeholder="Inserisci i km" required min="1">
+
+      <label for="age">Fascia d'età</label>
+      <select id="age" required>
+        <option value="standard">Maggiorenne</option>
+        <option value="minor">Minorenne</option>
+        <option value="senior">Over 65</option>
+      </select>
+
+      <button type="button" id="generate">Genera</button>
+      <button type="reset">Annulla</button>
+    </form>
+  <script src="script.js"></script>
 </body>
 </html>
